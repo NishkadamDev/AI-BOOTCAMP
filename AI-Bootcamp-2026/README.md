@@ -105,3 +105,12 @@ XP EARNED: 400 / 3,500
 ---
 
 *Updated daily as missions are completed. Follow along to watch the journey from AI beginner to Pro-Builder.* 🤖
+
+
+
+
+
+
+Sibling Edit - 
+
+I liek how you made it visual.
