@@ -1,87 +1,39 @@
-# 🎙️ Pi Voice — Meet Ace
+# 🛡️ AI Safety — Three Rules
 
-> A fully offline voice assistant running on a Raspberry Pi 5. Speak a question, hear an answer — no internet required.
+> Before you build with AI, know when to stop it.
 
 ---
 
 ## 🧠 About This Project
 
-**Pi Voice** is a local voice assistant named **Ace** that runs entirely on a Raspberry Pi 5. It listens through a microphone, sends your question to a local Gemma AI model via Ollama, and speaks the answer back using text-to-speech — all without touching the internet.
-
-It started with a wake word system, evolved into a continuous listener, and the final experiment? Getting **two Raspberry Pis to talk to each other**.
+**AI Safety** is a set of three personal principles developed during the AI Bootcamp — a framework for thinking responsibly about how AI systems should (and shouldn't) be used. Not theory. Not textbook. These are rules I came up with myself after working hands-on with AI tools every day.
 
 ---
 
-## 🛠️ Tech Stack
+## 📜 The Three Rules
 
-| Layer | Tool |
-|---|---|
-| **Hardware** | Raspberry Pi 5 + Microphone |
-| **Local AI Runtime** | Ollama |
-| **Model** | Gemma 3 (1B) |
-| **Speech Recognition** | `speech_recognition` + Google Speech API |
-| **Text-to-Speech** | `pyttsx3` |
-| **AI Assist** | Claude (Anthropic), Gemini (Google) |
-| **Language** | Python |
+### 1. Never allow an AI system to make a high-stakes decision.
+AI can inform, suggest, and analyse — but a human must make the final call on anything that truly matters. Medical diagnoses, legal judgements, financial ruin, life and death — these are not for machines to decide alone.
 
----
+### 2. You should always be able to reverse a decision.
+If an AI takes an action that can't be undone, that's a design failure. Every AI system should be built with an exit ramp. Reversibility isn't a nice-to-have — it's a safety requirement.
 
-## ⚙️ How It Works
-
-1. **Listen** — The Pi microphone picks up your voice using `speech_recognition`
-2. **Transcribe** — Google Speech API converts audio to text
-3. **Think** — The text is sent to Gemma 3 running locally via Ollama
-4. **Speak** — `pyttsx3` reads the response aloud as Ace's voice
-5. **Loop** — Ace keeps listening until you say *"goodbye"*
+### 3. Not every AI project should live forever.
+Knowing when to shut something down is just as important as knowing how to build it. An AI system that outlives its purpose — or its safety — is a liability, not an asset.
 
 ---
 
-## 🤖 Ace in Action
+## 💡 Why This Matters
 
-```
-🎙️  Calibrating microphone...
-✅ Ace is ready! Just speak your question.
-   Say 'goodbye' to quit. Press Ctrl+C to force stop.
-
-🤖 Ace says: Hello! I'm ready. What would you like to know?
-
-👂 Listening...
-🗣️  You asked: what is the speed of light?
-
-🧠 Thinking (gemma3:1b)...
-🤖 Ace says: The speed of light is approximately 299,792 kilometres per second in a vacuum.
-```
-
----
-
-## 🧪 Experiments Along the Way
-
-| Version | What Changed |
-|---|---|
-| v1 | Basic listen → think → speak loop |
-| v2 | Added a wake word to trigger listening |
-| v3 | Removed wake word for continuous listening |
-| v4 *(attempted)* | Two Raspberry Pis talking to each other |
-
-The two-Pi experiment — where one Pi asks questions and the other answers — was the most ambitious idea. Getting there is still in progress.
-
----
-
-## 💡 Key Learnings
-
-- Integrating microphone input and speaker output in Python
-- Stripping markdown from AI responses before text-to-speech (asterisks and headers sound terrible spoken aloud)
-- Managing ambient noise calibration for reliable speech recognition
-- How to query a local Ollama model via HTTP from Python
-- The challenges of real-time audio pipelines on low-power hardware
+Building AI is easy. Building AI *responsibly* is harder. These three rules aren't about slowing down progress — they're about making sure the things we build don't cause harm we didn't intend.
 
 ---
 
 ## 🚀 Part of the AI Bootcamp
 
-This project was built during the **Week 2 Physical AI** phase of a 15-day AI Developer Bootcamp.  
+This reflection was developed during the **Week 3 Mastery** phase of a 15-day AI Developer Bootcamp.  
 See the full bootcamp repo → [The AI Bootcamp](../README.md)
 
 ---
 
-*Ace is always listening. Always thinking. Always ready.* 🎙️🧠
+*The most important AI skill isn't building. It's knowing when not to.* 🛑
