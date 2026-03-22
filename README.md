@@ -1,14 +1,14 @@
-# ⚔️ Claude vs Gemini — Storytelling & Logic Showdown
+# 🌐 Replit Talking to Pi
 
-> Same prompt. Two AIs. One winner.
+> Control a Raspberry Pi from anywhere in the world — bridged by ngrok and powered by Claude.
 
 ---
 
 ## 🧠 About This Project
 
-**Claude vs Gemini** is a head-to-head AI comparison experiment. Both models were given the exact same story prompt and asked to generate a creative narrative. The outputs were then evaluated side by side — not just for creativity and writing quality, but for internal logic: did the story make sense? Were the plot points consistent? Did the events follow logically from each other?
+**Replit Talking to Pi** is a networking project that establishes a live two-way communication channel between a Replit-hosted web app and a Raspberry Pi 5. Using ngrok to punch through the local network, the app can send commands to the Pi and receive responses in real time — from anywhere, on any device.
 
-Spoiler: Claude won.
+Claude handles the intelligent layer, processing commands and generating responses between the two ends of the connection.
 
 ---
 
@@ -16,47 +16,49 @@ Spoiler: Claude won.
 
 | Layer | Tool |
 |---|---|
-| **AI Model 1** | Claude (Anthropic) |
-| **AI Model 2** | Gemini (Google) |
+| **Hardware** | Raspberry Pi 5 |
+| **Tunnel / Networking** | ngrok |
+| **AI** | Claude (Anthropic API), Gemini (Google) |
+| **App Platform** | Replit |
 | **Language** | Python |
 
 ---
 
 ## ⚙️ How It Works
 
-1. **Same Prompt** — Both AIs receive the identical story prompt with no extra guidance
-2. **Generate** — Each model produces its own complete narrative
-3. **Compare** — Outputs are evaluated across two dimensions:
-   - ✍️ **Storytelling quality** — creativity, atmosphere, character, prose
-   - 🧩 **Internal logic** — plot consistency, cause and effect, story coherence
-4. **Verdict** — A winner is declared per category and overall
+1. **Pi runs a local server** — A Python server starts on the Raspberry Pi, listening for incoming requests
+2. **ngrok creates a public URL** — ngrok tunnels the Pi's local port to a public HTTPS endpoint, making it reachable from the internet
+3. **Replit app connects** — The Replit-hosted app sends commands to the ngrok URL, which forwards them to the Pi
+4. **Claude processes** — Claude handles the intelligence layer, interpreting messages and generating smart responses
+5. **Pi responds** — The Pi executes the command and sends a response back through the tunnel to the app
 
 ---
 
-## 📊 Results
+## 🔗 The Architecture
 
-| Category | Claude | Gemini |
-|---|---|---|
-| ✍️ Storytelling Quality | ✅ Winner | — |
-| 🧩 Story Logic | ✅ Winner | — |
-| 🏆 Overall | ✅ **Winner** | — |
+```
+Replit App  ──────►  ngrok Public URL  ──────►  Raspberry Pi 5
+    ▲                                                  │
+    └──────────────────  Response  ───────────────────┘
+                    (Claude in the middle)
+```
 
 ---
 
 ## 💡 Key Learnings
 
-- The same prompt can produce dramatically different outputs depending on the model
-- Logical consistency in storytelling is just as important as creative flair
-- Claude tends to maintain narrative coherence over longer outputs
-- Comparing AI outputs side by side is one of the best ways to understand model strengths
+- Using ngrok to expose a local device to the public internet
+- Building a client-server architecture across two completely different platforms
+- Combining cloud-hosted apps with physical hardware in one pipeline
+- Understanding tunneling, ports, and HTTP requests at a practical level
 
 ---
 
 ## 🚀 Part of the AI Bootcamp
 
-This project was built during the **Week 1 AI Software Tools** phase of a 15-day AI Developer Bootcamp.  
+This project was built during the **Week 2 Physical AI** phase of a 15-day AI Developer Bootcamp.  
 See the full bootcamp repo → [The AI Bootcamp](../README.md)
 
 ---
 
-*When the prompt is equal, the model's true character comes out.* 🖊️
+*Your Pi, accessible from anywhere on Earth.* 🌍
