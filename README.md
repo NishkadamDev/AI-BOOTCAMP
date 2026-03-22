@@ -1,14 +1,14 @@
-# 🌐 Replit Talking to Pi
+# 📊 AI Bootcamp Tracker
 
-> Control a Raspberry Pi from anywhere in the world — bridged by ngrok and powered by Claude.
+> Track every mission, earn XP, climb the ranks — the command center for a 15-day AI Developer Bootcamp.
+
+🔗 **Live App:** [ai-bootcamp-tracker--nishkskadam.replit.app](https://ai-bootcamp-tracker--nishkskadam.replit.app/)
 
 ---
 
 ## 🧠 About This Project
 
-**Replit Talking to Pi** is a networking project that establishes a live two-way communication channel between a Replit-hosted web app and a Raspberry Pi 5. Using ngrok to punch through the local network, the app can send commands to the Pi and receive responses in real time — from anywhere, on any device.
-
-Claude handles the intelligent layer, processing commands and generating responses between the two ends of the connection.
+**AI Bootcamp Tracker** is a custom-built progress dashboard for tracking daily missions across a 15-day AI Developer Bootcamp. Every completed task earns XP, every XP pushes your rank higher, and every parent signature gets logged. Built in Python and deployed on Replit.
 
 ---
 
@@ -16,49 +16,52 @@ Claude handles the intelligent layer, processing commands and generating respons
 
 | Layer | Tool |
 |---|---|
-| **Hardware** | Raspberry Pi 5 |
-| **Tunnel / Networking** | ngrok |
-| **AI** | Claude (Anthropic API), Gemini (Google) |
-| **App Platform** | Replit |
 | **Language** | Python |
+| **AI** | Claude (Anthropic), Gemini (Google) |
+| **Platform** | Replit |
 
 ---
 
-## ⚙️ How It Works
+## ✨ Features
 
-1. **Pi runs a local server** — A Python server starts on the Raspberry Pi, listening for incoming requests
-2. **ngrok creates a public URL** — ngrok tunnels the Pi's local port to a public HTTPS endpoint, making it reachable from the internet
-3. **Replit app connects** — The Replit-hosted app sends commands to the ngrok URL, which forwards them to the Pi
-4. **Claude processes** — Claude handles the intelligence layer, interpreting messages and generating smart responses
-5. **Pi responds** — The Pi executes the command and sends a response back through the tunnel to the app
+### ⚡ XP & Rank Progression
+Complete missions to earn XP points. As XP accumulates, your rank automatically upgrades — from Rookie all the way up to PRO-BUILDER.
+
+### ✅ Mission Checklist (Per Day)
+Each of the 15 bootcamp days has its own mission checklist. Check off tasks as you complete them and watch your progress build day by day.
+
+### ✍️ Parent Signature Logging
+Completed days get signed off by a parent and logged in the tracker — a built-in accountability system for the bootcamp.
+
+### 🔧 Multi-Tool Toggles
+Each mission tracks which AI tools were used — Claude, Gemini, or Raspberry Pi — giving a clear picture of the full tech stack across the bootcamp.
 
 ---
 
-## 🔗 The Architecture
+## 📅 Bootcamp Progress
 
-```
-Replit App  ──────►  ngrok Public URL  ──────►  Raspberry Pi 5
-    ▲                                                  │
-    └──────────────────  Response  ───────────────────┘
-                    (Claude in the middle)
-```
+| Week | Focus | Status |
+|---|---|---|
+| Week 1 | AI Software Tools | ✅ Complete |
+| Week 2 | Physical AI (Raspberry Pi) | ✅ Complete |
+| Week 3 | Mastery & Demo Day | 🔄 In Progress |
 
 ---
 
 ## 💡 Key Learnings
 
-- Using ngrok to expose a local device to the public internet
-- Building a client-server architecture across two completely different platforms
-- Combining cloud-hosted apps with physical hardware in one pipeline
-- Understanding tunneling, ports, and HTTP requests at a practical level
+- Building a full web app in Python from scratch
+- Deploying and hosting a live app on Replit
+- Designing a gamified progress system with XP and ranks
+- Tracking multi-dimensional data (missions, tools, signatures) in one dashboard
 
 ---
 
 ## 🚀 Part of the AI Bootcamp
 
-This project was built during the **Week 2 Physical AI** phase of a 15-day AI Developer Bootcamp.  
+This is the central tracker for the entire **15-day AI Developer Bootcamp**.  
 See the full bootcamp repo → [The AI Bootcamp](../README.md)
 
 ---
 
-*Your Pi, accessible from anywhere on Earth.* 🌍
+*Every mission logged. Every rank earned. No shortcuts.* 🏆
