@@ -1,14 +1,14 @@
-# 📊 AI Bootcamp Tracker
+# 🧠 Neuron Trainer
 
-> Track every mission, earn XP, climb the ranks — the command center for a 15-day AI Developer Bootcamp.
-
-🔗 **Live App:** [ai-bootcamp-tracker--nishkskadam.replit.app](https://ai-bootcamp-tracker--nishkskadam.replit.app/)
+> A neural network built from scratch — no libraries, just math, Python, and a Raspberry Pi.
 
 ---
 
 ## 🧠 About This Project
 
-**AI Bootcamp Tracker** is a custom-built progress dashboard for tracking daily missions across a 15-day AI Developer Bootcamp. Every completed task earns XP, every XP pushes your rank higher, and every parent signature gets logged. Built in Python and deployed on Replit.
+**Neuron Trainer** is a hand-coded single neuron (perceptron) that learns to classify whether a food is healthy or not based on its sugar level. No TensorFlow. No PyTorch. No shortcuts. Just raw Python math running on a Raspberry Pi 5 — demonstrating exactly how a neural network learns at the most fundamental level.
+
+Claude helped design and debug the training logic.
 
 ---
 
@@ -16,52 +16,84 @@
 
 | Layer | Tool |
 |---|---|
-| **Language** | Python |
-| **AI** | Claude (Anthropic), Gemini (Google) |
-| **Platform** | Replit |
+| **Hardware** | Raspberry Pi 5 |
+| **Language** | Python (no ML libraries) |
+| **AI Assist** | Claude (Anthropic), Gemini (Google) |
+| **Activation Function** | Sigmoid |
+| **Optimizer** | Gradient Descent (manual) |
 
 ---
 
-## ✨ Features
+## ⚙️ How It Works
 
-### ⚡ XP & Rank Progression
-Complete missions to earn XP points. As XP accumulates, your rank automatically upgrades — from Rookie all the way up to PRO-BUILDER.
+The neuron starts completely dumb — with a random weight and zero bias. Over 500 training epochs, it adjusts itself using gradient descent until it can correctly classify inputs.
 
-### ✅ Mission Checklist (Per Day)
-Each of the 15 bootcamp days has its own mission checklist. Check off tasks as you complete them and watch your progress build day by day.
+### The Math
+```
+output = sigmoid(sugar × weight + bias)
+error  = correct_answer - output
+weight += learning_rate × error × sugar
+bias   += learning_rate × error
+```
 
-### ✍️ Parent Signature Logging
-Completed days get signed off by a parent and logged in the tracker — a built-in accountability system for the bootcamp.
-
-### 🔧 Multi-Tool Toggles
-Each mission tracks which AI tools were used — Claude, Gemini, or Raspberry Pi — giving a clear picture of the full tech stack across the bootcamp.
+### The Sigmoid Function
+```python
+def sigmoid(x):
+    return 1 / (1 + (2.718 ** -x))
+```
+Squashes any number into a value between 0 and 1 — perfect for yes/no classification.
 
 ---
 
-## 📅 Bootcamp Progress
+## 🍎 Training Data
 
-| Week | Focus | Status |
-|---|---|---|
-| Week 1 | AI Software Tools | ✅ Complete |
-| Week 2 | Physical AI (Raspberry Pi) | ✅ Complete |
-| Week 3 | Mastery & Demo Day | 🔄 In Progress |
+| Sugar Level | Label |
+|---|---|
+| 0.9 | ✅ Healthy |
+| 0.8 | ✅ Healthy |
+| 0.7 | ✅ Healthy |
+| 0.2 | ❌ Not Healthy |
+| 0.1 | ❌ Not Healthy |
+| 0.3 | ❌ Not Healthy |
+
+---
+
+## 📈 Training Output
+
+```
+=============================================
+  🧠 NEURON TRAINING BEGINS
+=============================================
+Epoch  50 | Loss: 0.0821 | Weight: 2.1043 | Bias: -1.0021
+Epoch 100 | Loss: 0.0412 | Weight: 2.8834 | Bias: -1.4211
+...
+Epoch 500 | Loss: 0.0023 | Weight: 5.1234 | Bias: -2.6891
+
+✅ Training complete!
+
+Testing the trained neuron:
+  Sugar = 0.1 (Apple?)  → 0.08  ❌ Not healthy
+  Sugar = 0.5 (Soda?)   → 0.51  ✅ Healthy
+  Sugar = 0.9 (Candy?)  → 0.96  ✅ Healthy
+```
 
 ---
 
 ## 💡 Key Learnings
 
-- Building a full web app in Python from scratch
-- Deploying and hosting a live app on Replit
-- Designing a gamified progress system with XP and ranks
-- Tracking multi-dimensional data (missions, tools, signatures) in one dashboard
+- How a single neuron learns through gradient descent
+- What weights and biases actually do mathematically
+- Why the sigmoid function is used for binary classification
+- How loss decreases over training epochs as the model improves
+- The foundations that underpin every modern AI model
 
 ---
 
 ## 🚀 Part of the AI Bootcamp
 
-This is the central tracker for the entire **15-day AI Developer Bootcamp**.  
+This project was built during the **Week 2 Physical AI** phase of a 15-day AI Developer Bootcamp.  
 See the full bootcamp repo → [The AI Bootcamp](../README.md)
 
 ---
 
-*Every mission logged. Every rank earned. No shortcuts.* 🏆
+*Every AI model in the world — GPT, Claude, Gemini — is just this, repeated billions of times.* 🤯
