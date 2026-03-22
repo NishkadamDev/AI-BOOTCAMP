@@ -1,116 +1,87 @@
-# 🚀 15-Day AI Developer Bootcamp
+# 🎙️ Pi Voice — Meet Ace
 
-![Progress](https://img.shields.io/badge/Progress-3%2F15%20Missions-00ffcc?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
-![Tools](https://img.shields.io/badge/Tools-Claude%20%7C%20Gemini%20%7C%20Raspberry%20Pi-blue?style=for-the-badge)
+> A fully offline voice assistant running on a Raspberry Pi 5. Speak a question, hear an answer — no internet required.
 
 ---
 
-## 👤 About This Bootcamp
+## 🧠 About This Project
 
-I am currently completing an intensive **15-Day AI Developer Bootcamp**, building hands-on experience with modern artificial intelligence tools, workflows, and physical computing systems. This repository documents my progress, projects, and learnings across every mission.
+**Pi Voice** is a local voice assistant named **Ace** that runs entirely on a Raspberry Pi 5. It listens through a microphone, sends your question to a local Gemma AI model via Ollama, and speaks the answer back using text-to-speech — all without touching the internet.
 
----
-
-## ✅ Progress Log
-
-### Week 1 — Mastering the Software Brains
-
-| Day | Mission | Status | Tool Used |
-|-----|---------|--------|-----------|
-| 01 | **INITIALIZE** — Build a Progress Tracker app in Claude | ✅ Complete | Claude |
-| 02 | **FACT-CHECK** — AI Research & Verification with Gemini | ✅ Complete | Gemini |
-| 03 | **CREATIVE DUEL** — Claude vs. Gemini Comparative Analysis | ✅ Complete | Claude + Gemini |
-| 04 | **VAULT SETUP** — GitHub Foundations | 🔒 Locked | — |
-| 05 | **GO LIVE** — Replit Deployment | 🔒 Locked | — |
-
-### Week 2 — Physical AI *(Raspberry Pi)*
-
-| Day | Mission | Status | Tool Used |
-|-----|---------|--------|-----------|
-| 06 | **PI BOOT** — Raspberry Pi Setup | 🔒 Locked | — |
-| 07 | **LOCAL BRAIN** — Offline AI Model | 🔒 Locked | — |
-| 08 | **VISION QUEST** — Object Detection with Pi Camera | 🔒 Locked | — |
-| 09 | **AGENT MODE** — Replit Agent + Pi Integration | 🔒 Locked | — |
-| 10 | **ALERT SYSTEM** — Physical AI Alert Build | 🔒 Locked | — |
-
-### Week 3 — Mastery & Graduation
-
-| Day | Mission | Status | Tool Used |
-|-----|---------|--------|-----------|
-| 11 | **MATH OF AI** — Neuron Visualization on Pi | 🔒 Locked | — |
-| 12 | **AI ETHICS** — Guardrails & Safety Guide | 🔒 Locked | — |
-| 13 | **VOICE CTRL** — Voice-Controlled Physical Assistant | 🔒 Locked | — |
-| 14 | **POLISH** — Portfolio & README Cleanup | 🔒 Locked | — |
-| 15 | **GRAND FINALE** — Family Pitch & Demo Day | 🔒 Locked | — |
+It started with a wake word system, evolved into a continuous listener, and the final experiment? Getting **two Raspberry Pis to talk to each other**.
 
 ---
 
-## 📚 What I've Learned So Far
+## 🛠️ Tech Stack
 
-### Day 1 — Development Environment & App Building
-Built and deployed a fully functional progress tracking application using React and Claude AI. Gained practical experience with component-based UI development, prompt engineering, and deploying web applications through cloud platforms including Replit and GitHub.
-
-### Day 2 — AI Research & Fact Verification
-Developed critical AI literacy skills by using Google Gemini as a research and fact-checking tool. Learned to cross-reference AI-generated outputs, identify limitations in large language models, and build reliable research workflows using multiple AI systems in parallel.
-
-### Day 3 — Comparative AI Analysis
-Conducted a structured evaluation of Claude vs. Gemini across storytelling and logical reasoning tasks. Developed a framework for selecting the right AI tool for the right job — a core skill for any modern AI-assisted workflow.
-
----
-
-## 🛠️ Tools & Technologies
-
-| Category | Tools |
-|----------|-------|
-| **AI Models** | Claude (Anthropic), Google Gemini, Pi AI |
-| **Frontend** | React, JavaScript, CSS, Vite |
-| **Deployment** | Replit, StackBlitz |
-| **Version Control** | Git, GitHub |
-| **Physical Computing** | Raspberry Pi *(coming Week 2)* |
+| Layer | Tool |
+|---|---|
+| **Hardware** | Raspberry Pi 5 + Microphone |
+| **Local AI Runtime** | Ollama |
+| **Model** | Gemma 3 (1B) |
+| **Speech Recognition** | `speech_recognition` + Google Speech API |
+| **Text-to-Speech** | `pyttsx3` |
+| **AI Assist** | Claude (Anthropic), Gemini (Google) |
+| **Language** | Python |
 
 ---
 
-## 🎯 Goals
+## ⚙️ How It Works
 
-- ✅ Build and deploy a real AI-powered web application
-- ✅ Develop critical AI research and fact-checking skills
-- ✅ Compare and evaluate multiple AI models
-- 🔄 Set up a physical AI system using Raspberry Pi
-- 🔄 Build agentic workflows connecting cloud and hardware
-- 🔄 Complete a capstone project to present at Demo Day
+1. **Listen** — The Pi microphone picks up your voice using `speech_recognition`
+2. **Transcribe** — Google Speech API converts audio to text
+3. **Think** — The text is sent to Gemma 3 running locally via Ollama
+4. **Speak** — `pyttsx3` reads the response aloud as Ace's voice
+5. **Loop** — Ace keeps listening until you say *"goodbye"*
 
 ---
 
-## 📁 Repository Structure
+## 🤖 Ace in Action
 
 ```
-/
-├── README.md          ← You are here
-├── src/
-│   └── App.jsx        ← Progress Tracker App (Day 1)
-└── notes/             ← Daily mission notes (coming soon)
+🎙️  Calibrating microphone...
+✅ Ace is ready! Just speak your question.
+   Say 'goodbye' to quit. Press Ctrl+C to force stop.
+
+🤖 Ace says: Hello! I'm ready. What would you like to know?
+
+👂 Listening...
+🗣️  You asked: what is the speed of light?
+
+🧠 Thinking (gemma3:1b)...
+🤖 Ace says: The speed of light is approximately 299,792 kilometres per second in a vacuum.
 ```
 
 ---
 
-## 🏆 Current Rank
+## 🧪 Experiments Along the Way
 
-```
-██████████░░░░░░░░░░  3/15 Missions Complete
-RANK: OPERATIVE
-XP EARNED: 400 / 3,500
-```
+| Version | What Changed |
+|---|---|
+| v1 | Basic listen → think → speak loop |
+| v2 | Added a wake word to trigger listening |
+| v3 | Removed wake word for continuous listening |
+| v4 *(attempted)* | Two Raspberry Pis talking to each other |
+
+The two-Pi experiment — where one Pi asks questions and the other answers — was the most ambitious idea. Getting there is still in progress.
 
 ---
 
-*Updated daily as missions are completed. Follow along to watch the journey from AI beginner to Pro-Builder.* 🤖
+## 💡 Key Learnings
 
+- Integrating microphone input and speaker output in Python
+- Stripping markdown from AI responses before text-to-speech (asterisks and headers sound terrible spoken aloud)
+- Managing ambient noise calibration for reliable speech recognition
+- How to query a local Ollama model via HTTP from Python
+- The challenges of real-time audio pipelines on low-power hardware
 
+---
 
+## 🚀 Part of the AI Bootcamp
 
+This project was built during the **Week 2 Physical AI** phase of a 15-day AI Developer Bootcamp.  
+See the full bootcamp repo → [The AI Bootcamp](../README.md)
 
+---
 
-Sibling Edit - 
-
-I liek how you made it visual.
+*Ace is always listening. Always thinking. Always ready.* 🎙️🧠
