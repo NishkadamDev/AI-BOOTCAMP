@@ -58,8 +58,6 @@ Every project here was designed, built, tested, and shipped by me.
 | [PI-Camera-Picture-Labels](../PI-Camera-Picture-Labels) | Real-time object detection with YOLOv8 and Claude labeling | Pi, YOLOv8, Claude, Gemini |
 | [human-detector](../human-detector) | Boss Detector — caught Laksh sneaking in at 3:42 PM | Pi, Claude, Gemini, Replit |
 | [replit-talking-to-pi](../replit-talking-to-pi) | Web app communicating with the Pi in real time via ngrok tunnel | Pi, ngrok, Claude, Gemini |
-| [neuron-trainer](../neuron-trainer) | Single neuron built from scratch in Python — no ML libraries, just math | Pi, Claude, Gemini |
-| [pi-voice](../pi-voice) | Ace — a fully offline voice assistant that listens, thinks, and speaks | Pi, Ollama, Gemma 3, Claude, Gemini |
 
 ---
 
@@ -67,6 +65,8 @@ Every project here was designed, built, tested, and shipped by me.
 
 | Repo | Description | Stack |
 |---|---|---|
+| [neuron-trainer](../neuron-trainer) | Single neuron built from scratch in Python — no ML libraries, just math | Pi, Claude, Gemini |
+| [pi-voice](../pi-voice) | Ace — a fully offline voice assistant that listens, thinks, and speaks | Pi, Ollama, Gemma 3, Claude, Gemini |
 | [ai-safety](../ai-safety) | Three original rules for responsible AI development | — |
 
 ---
