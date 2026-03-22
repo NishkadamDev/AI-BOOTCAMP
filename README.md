@@ -1,114 +1,77 @@
-# 🤖 AI Bootcamp — The Complete Journey
+# 📸 PI-Camera-Picture-Labels
 
-> 15 days. 3 weeks. 12 projects. One Raspberry Pi. A whole lot of AI.
-
----
-
-## 🧠 What Is This?
-
-This is the master repository for a **15-Day AI Pro-Builder Bootcamp** — a hands-on intensive program where I built real AI applications from scratch every single day. From web apps to physical hardware, from cloud AI to fully offline models, this bootcamp covered the full spectrum of modern AI development.
-
-Every project here was designed, built, tested, and shipped by me.
+> Real-time object detection on a Raspberry Pi 5 — powered by YOLOv8 and Claude AI.
 
 ---
 
-## 📅 Bootcamp Structure
+## 🧠 About This Project
 
-| Week | Theme | Focus |
-|---|---|---|
-| **Week 1** | AI Software Tools | Web apps, APIs, prompt engineering, AI comparisons |
-| **Week 2** | Physical AI | Raspberry Pi 5, edge computing, computer vision, voice |
-| **Week 3** | Mastery | Polish, reflection, AI safety, family Demo Day |
+**PI-Camera-Picture-Labels** is an edge AI computer vision project that uses a Raspberry Pi 5 and a connected camera to capture images and automatically identify objects in real time. YOLOv8 handles the detection, and Claude (Anthropic) adds intelligent labeling and description on top — all running on the Pi.
+
+No cloud vision API. No lag. Just AI on hardware.
 
 ---
 
-## 🛠️ Full Tech Stack
+## 🛠️ Tech Stack
 
-| Category | Tools |
+| Layer | Tool |
 |---|---|
-| **AI Platforms** | Claude (Anthropic), Gemini (Google) |
-| **Local AI** | Ollama, Llama, Gemma 3 |
-| **Hardware** | Raspberry Pi 5 + Camera + Microphone |
-| **Languages** | Python, JavaScript, React (JSX) |
-| **Platforms** | Replit, Bolt.new, CodeSandbox, StackBlitz |
-| **Networking** | ngrok |
-| **Version Control** | GitHub |
+| **Hardware** | Raspberry Pi 5 + Camera Module |
+| **Object Detection** | YOLOv8 (Ultralytics) |
+| **AI / Labeling** | Claude (Anthropic API), Gemini (Google) |
+| **Language** | Python |
 
 ---
 
-## 📂 All Projects
+## ⚙️ How It Works
 
-### Week 1 — AI Software Tools
-
-| Repo | Description | Stack |
-|---|---|---|
-| [Claude-vs.-Gemini](../Claude-vs.-Gemini) | Head-to-head AI comparison — same prompt, two models, one winner (Claude) | Claude, Gemini |
-| [Cluade-vs.-Gemini-Story-Maker](../Cluade-vs.-Gemini-Story-Maker) | Storytelling & logic showdown — evaluated creativity and narrative coherence | Claude, Gemini |
-| [AI-bootcamp-tracker](../AI-bootcamp-tracker) | Custom progress dashboard with XP, ranks, mission checklists & parent sign-off | Python, Claude, Gemini, Replit |
-| [AI-Bootcamp-2026](../AI-Bootcamp-2026) | Learner profile & reflections — including GitHub collaboration with my brother | Claude, Gemini |
+1. **Capture** — The Pi camera takes a photo or reads a live video frame
+2. **Detect** — YOLOv8 runs inference on the image and draws bounding boxes around detected objects
+3. **Label** — Claude receives the detection results and generates smart, readable labels or descriptions
+4. **Output** — The annotated image is saved or displayed with object names and confidence scores
 
 ---
 
-### Week 2 — Physical AI (Raspberry Pi)
+## 🎯 What It Can Identify
 
-| Repo | Description | Stack |
-|---|---|---|
-| [PI-Setup](../PI-Setup) | Full Raspberry Pi 5 setup — Ollama, local models, offline AI proof | Pi, Ollama, Claude, Gemini |
-| [Local-Brain](../Local-Brain) | Fully offline AI assistant running Llama/Gemma on the Pi via Ollama | Pi, Ollama, Claude, Gemini |
-| [PI-Camera-Picture-Labels](../PI-Camera-Picture-Labels) | Real-time object detection with YOLOv8 and Claude labeling | Pi, YOLOv8, Claude, Gemini |
-| [human-detector](../human-detector) | Boss Detector — caught Laksh sneaking in at 3:42 PM | Pi, Claude, Gemini, Replit |
-| [replit-talking-to-pi](../replit-talking-to-pi) | Web app communicating with the Pi in real time via ngrok tunnel | Pi, ngrok, Claude, Gemini |
+YOLOv8 is trained on 80 object classes including:
 
----
+- People, animals (dogs, cats, birds...)
+- Vehicles (cars, bikes, buses...)
+- Everyday objects (bottles, chairs, laptops, phones...)
+- Food, sports equipment, and more
 
-### Week 3 — Mastery & Reflection
-
-| Repo | Description | Stack |
-|---|---|---|
-| [neuron-trainer](../neuron-trainer) | Single neuron built from scratch in Python — no ML libraries, just math | Pi, Claude, Gemini |
-| [pi-voice](../pi-voice) | Ace — a fully offline voice assistant that listens, thinks, and speaks | Pi, Ollama, Gemma 3, Claude, Gemini |
-| [ai-safety](../ai-safety) | Three original rules for responsible AI development | — |
+Claude adds context on top — turning raw detection data into natural language descriptions.
 
 ---
 
-## ⭐ Highlight Moments
+## 💡 Key Learnings
 
-🎯 **The Boss Detector caught Laksh sneaking in at 3:42 PM.** The dashboard logged it automatically.
-
-🧠 **Built a neural network from scratch** — no TensorFlow, no PyTorch. Just Python math and gradient descent.
-
-🌐 **Got a Replit app talking to a Raspberry Pi** through an ngrok tunnel — cloud meets hardware.
-
-🎙️ **Ace answered questions out loud** with zero internet — a fully local voice assistant on a Pi.
-
-🏆 **Claude beat Gemini** in the storytelling and logic showdown.
+- Deploying a computer vision model on edge hardware (no GPU required)
+- Combining a local detection model (YOLOv8) with a cloud AI (Claude) in one pipeline
+- Working with the Raspberry Pi camera module in Python
+- Processing and annotating images programmatically
 
 ---
 
-## 📜 My Three AI Safety Rules
+## 📁 Project Structure
 
-> 1. Never allow an AI system to make a high-stakes decision.
-> 2. You should always be able to reverse a decision.
-> 3. Not every AI project should live forever.
-
----
-
-## 💡 What I Learned
-
-- How to use Claude, Gemini, and local models — and when to use each one
-- How to deploy web apps across Replit, Bolt.new, CodeSandbox, and StackBlitz
-- How edge AI works — running real models on a Raspberry Pi with no internet
-- How neural networks actually learn, built from first principles
-- How to collaborate on GitHub with pull requests and code reviews
-- That the hardest part of AI isn't building — it's building responsibly
+```
+PI-Camera-Picture-Labels/
+├── detect.py          # Main script — capture, detect, label
+├── camera.py          # Pi camera setup and capture logic
+├── claude_label.py    # Claude API integration for descriptions
+├── output/            # Saved annotated images
+└── README.md
+```
 
 ---
 
-## 👨‍💻 About
+## 🚀 Part of the Austin Edge-AI Lab
 
-Built during a **15-Day AI Pro-Builder Bootcamp** in **Austin, Texas**, 2026.  
-Powered by curiosity, Claude, Gemini, a Raspberry Pi, and a lot of late afternoons.
+This project was built during the **Week 2 Physical AI** phase of a 15-day AI Developer Bootcamp in Austin, Texas.  
+See the full bootcamp repo → [The AI Bootcamp](../README.md)
 
 ---
 
-*15 days. Real projects. Real AI. No shortcuts.* 🚀
+*Built with a Pi, a camera, and a lot of object detection curiosity.* 🥧📷
