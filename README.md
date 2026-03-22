@@ -1,14 +1,14 @@
-# 📸 PI-Camera-Picture-Labels
+# 🕵️ Human Detector (Boss Detector)
 
-> Real-time object detection on a Raspberry Pi 5 — powered by YOLOv8 and Claude AI.
+> Catch anyone trying to sneak in — live human detection on a Raspberry Pi 5 with a real-time dashboard.
 
 ---
 
 ## 🧠 About This Project
 
-**PI-Camera-Picture-Labels** is an edge AI computer vision project that uses a Raspberry Pi 5 and a connected camera to capture images and automatically identify objects in real time. YOLOv8 handles the detection, and Claude (Anthropic) adds intelligent labeling and description on top — all running on the Pi.
+**Human Detector** is an edge AI security camera project that detects when a person enters the frame and logs the intrusion with a timestamp. Built on a Raspberry Pi 5 with a live camera feed, it uses AI to spot humans in real time and reports detections to a dashboard built on Replit.
 
-No cloud vision API. No lag. Just AI on hardware.
+Field tested and verified: it caught **Laksh** trying to sneak in at **3:42 PM**. The dashboard didn't miss a thing.
 
 ---
 
@@ -17,61 +17,55 @@ No cloud vision API. No lag. Just AI on hardware.
 | Layer | Tool |
 |---|---|
 | **Hardware** | Raspberry Pi 5 + Camera Module |
-| **Object Detection** | YOLOv8 (Ultralytics) |
-| **AI / Labeling** | Claude (Anthropic API), Gemini (Google) |
+| **AI / Detection** | Claude (Anthropic API), Gemini (Google) |
+| **Dashboard & Backend** | Replit |
 | **Language** | Python |
 
 ---
 
 ## ⚙️ How It Works
 
-1. **Capture** — The Pi camera takes a photo or reads a live video frame
-2. **Detect** — YOLOv8 runs inference on the image and draws bounding boxes around detected objects
-3. **Label** — Claude receives the detection results and generates smart, readable labels or descriptions
-4. **Output** — The annotated image is saved or displayed with object names and confidence scores
+1. **Watch** — The Pi camera streams a live feed, monitoring the room continuously
+2. **Detect** — Claude analyzes frames and identifies when a human is present
+3. **Log** — The detection is timestamped and sent to the Replit dashboard
+4. **Alert** — The dashboard displays the intrusion log so you always know who came in and when
 
 ---
 
-## 🎯 What It Can Identify
+## 📊 The Dashboard
 
-YOLOv8 is trained on 80 object classes including:
+The Replit-hosted dashboard shows:
 
-- People, animals (dogs, cats, birds...)
-- Vehicles (cars, bikes, buses...)
-- Everyday objects (bottles, chairs, laptops, phones...)
-- Food, sports equipment, and more
+- ✅ Live detection status (Human detected / All clear)
+- 🕐 Timestamp of each detection event
+- 📋 Full intrusion log with history
 
-Claude adds context on top — turning raw detection data into natural language descriptions.
+---
+
+## 🧪 Real-World Test
+
+| Who | Time | Result |
+|---|---|---|
+| Laksh | 3:42 PM | 🚨 Caught |
+
+The Boss Detector works. Don't test it.
 
 ---
 
 ## 💡 Key Learnings
 
-- Deploying a computer vision model on edge hardware (no GPU required)
-- Combining a local detection model (YOLOv8) with a cloud AI (Claude) in one pipeline
-- Working with the Raspberry Pi camera module in Python
-- Processing and annotating images programmatically
+- Using Claude for real-time image analysis instead of a traditional CV model
+- Connecting Raspberry Pi hardware to a cloud-hosted dashboard via API
+- Building a simple but functional security logging system
+- Combining edge hardware with web-based monitoring
 
 ---
 
-## 📁 Project Structure
+## 🚀 Part of the AI Bootcamp
 
-```
-PI-Camera-Picture-Labels/
-├── detect.py          # Main script — capture, detect, label
-├── camera.py          # Pi camera setup and capture logic
-├── claude_label.py    # Claude API integration for descriptions
-├── output/            # Saved annotated images
-└── README.md
-```
-
----
-
-## 🚀 Part of the Austin Edge-AI Lab
-
-This project was built during the **Week 2 Physical AI** phase of a 15-day AI Developer Bootcamp in Austin, Texas.  
+This project was built during the **Week 2 Physical AI** phase of a 15-day AI Developer Bootcamp.  
 See the full bootcamp repo → [The AI Bootcamp](../README.md)
 
 ---
 
-*Built with a Pi, a camera, and a lot of object detection curiosity.* 🥧📷
+*No sneaking allowed.* 🚫👀
