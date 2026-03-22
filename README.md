@@ -1,39 +1,114 @@
-# 🛡️ AI Safety — Three Rules
+# 🤖 AI Bootcamp — The Complete Journey
 
-> Before you build with AI, know when to stop it.
-
----
-
-## 🧠 About This Project
-
-**AI Safety** is a set of three personal principles developed during the AI Bootcamp — a framework for thinking responsibly about how AI systems should (and shouldn't) be used. Not theory. Not textbook. These are rules I came up with myself after working hands-on with AI tools every day.
+> 15 days. 3 weeks. 12 projects. One Raspberry Pi. A whole lot of AI.
 
 ---
 
-## 📜 The Three Rules
+## 🧠 What Is This?
 
-### 1. Never allow an AI system to make a high-stakes decision.
-AI can inform, suggest, and analyse — but a human must make the final call on anything that truly matters. Medical diagnoses, legal judgements, financial ruin, life and death — these are not for machines to decide alone.
+This is the master repository for a **15-Day AI Pro-Builder Bootcamp** — a hands-on intensive program where I built real AI applications from scratch every single day. From web apps to physical hardware, from cloud AI to fully offline models, this bootcamp covered the full spectrum of modern AI development.
 
-### 2. You should always be able to reverse a decision.
-If an AI takes an action that can't be undone, that's a design failure. Every AI system should be built with an exit ramp. Reversibility isn't a nice-to-have — it's a safety requirement.
-
-### 3. Not every AI project should live forever.
-Knowing when to shut something down is just as important as knowing how to build it. An AI system that outlives its purpose — or its safety — is a liability, not an asset.
+Every project here was designed, built, tested, and shipped by me.
 
 ---
 
-## 💡 Why This Matters
+## 📅 Bootcamp Structure
 
-Building AI is easy. Building AI *responsibly* is harder. These three rules aren't about slowing down progress — they're about making sure the things we build don't cause harm we didn't intend.
-
----
-
-## 🚀 Part of the AI Bootcamp
-
-This reflection was developed during the **Week 3 Mastery** phase of a 15-day AI Developer Bootcamp.  
-See the full bootcamp repo → [The AI Bootcamp](../README.md)
+| Week | Theme | Focus |
+|---|---|---|
+| **Week 1** | AI Software Tools | Web apps, APIs, prompt engineering, AI comparisons |
+| **Week 2** | Physical AI | Raspberry Pi 5, edge computing, computer vision, voice |
+| **Week 3** | Mastery | Polish, reflection, AI safety, family Demo Day |
 
 ---
 
-*The most important AI skill isn't building. It's knowing when not to.* 🛑
+## 🛠️ Full Tech Stack
+
+| Category | Tools |
+|---|---|
+| **AI Platforms** | Claude (Anthropic), Gemini (Google) |
+| **Local AI** | Ollama, Llama, Gemma 3 |
+| **Hardware** | Raspberry Pi 5 + Camera + Microphone |
+| **Languages** | Python, JavaScript, React (JSX) |
+| **Platforms** | Replit, Bolt.new, CodeSandbox, StackBlitz |
+| **Networking** | ngrok |
+| **Version Control** | GitHub |
+
+---
+
+## 📂 All Projects
+
+### Week 1 — AI Software Tools
+
+| Repo | Description | Stack |
+|---|---|---|
+| [Claude-vs.-Gemini](../Claude-vs.-Gemini) | Head-to-head AI comparison — same prompt, two models, one winner (Claude) | Claude, Gemini |
+| [Cluade-vs.-Gemini-Story-Maker](../Cluade-vs.-Gemini-Story-Maker) | Storytelling & logic showdown — evaluated creativity and narrative coherence | Claude, Gemini |
+| [AI-bootcamp-tracker](../AI-bootcamp-tracker) | Custom progress dashboard with XP, ranks, mission checklists & parent sign-off | Python, Claude, Gemini, Replit |
+| [AI-Bootcamp-2026](../AI-Bootcamp-2026) | Learner profile & reflections — including GitHub collaboration with my brother | Claude, Gemini |
+
+---
+
+### Week 2 — Physical AI (Raspberry Pi)
+
+| Repo | Description | Stack |
+|---|---|---|
+| [PI-Setup](../PI-Setup) | Full Raspberry Pi 5 setup — Ollama, local models, offline AI proof | Pi, Ollama, Claude, Gemini |
+| [Local-Brain](../Local-Brain) | Fully offline AI assistant running Llama/Gemma on the Pi via Ollama | Pi, Ollama, Claude, Gemini |
+| [PI-Camera-Picture-Labels](../PI-Camera-Picture-Labels) | Real-time object detection with YOLOv8 and Claude labeling | Pi, YOLOv8, Claude, Gemini |
+| [human-detector](../human-detector) | Boss Detector — caught Laksh sneaking in at 3:42 PM | Pi, Claude, Gemini, Replit |
+| [replit-talking-to-pi](../replit-talking-to-pi) | Web app communicating with the Pi in real time via ngrok tunnel | Pi, ngrok, Claude, Gemini |
+| [neuron-trainer](../neuron-trainer) | Single neuron built from scratch in Python — no ML libraries, just math | Pi, Claude, Gemini |
+| [pi-voice](../pi-voice) | Ace — a fully offline voice assistant that listens, thinks, and speaks | Pi, Ollama, Gemma 3, Claude, Gemini |
+
+---
+
+### Week 3 — Mastery & Reflection
+
+| Repo | Description | Stack |
+|---|---|---|
+| [ai-safety](../ai-safety) | Three original rules for responsible AI development | — |
+
+---
+
+## ⭐ Highlight Moments
+
+🎯 **The Boss Detector caught Laksh sneaking in at 3:42 PM.** The dashboard logged it automatically.
+
+🧠 **Built a neural network from scratch** — no TensorFlow, no PyTorch. Just Python math and gradient descent.
+
+🌐 **Got a Replit app talking to a Raspberry Pi** through an ngrok tunnel — cloud meets hardware.
+
+🎙️ **Ace answered questions out loud** with zero internet — a fully local voice assistant on a Pi.
+
+🏆 **Claude beat Gemini** in the storytelling and logic showdown.
+
+---
+
+## 📜 My Three AI Safety Rules
+
+> 1. Never allow an AI system to make a high-stakes decision.
+> 2. You should always be able to reverse a decision.
+> 3. Not every AI project should live forever.
+
+---
+
+## 💡 What I Learned
+
+- How to use Claude, Gemini, and local models — and when to use each one
+- How to deploy web apps across Replit, Bolt.new, CodeSandbox, and StackBlitz
+- How edge AI works — running real models on a Raspberry Pi with no internet
+- How neural networks actually learn, built from first principles
+- How to collaborate on GitHub with pull requests and code reviews
+- That the hardest part of AI isn't building — it's building responsibly
+
+---
+
+## 👨‍💻 About
+
+Built during a **15-Day AI Pro-Builder Bootcamp** in **Austin, Texas**, 2026.  
+Powered by curiosity, Claude, Gemini, a Raspberry Pi, and a lot of late afternoons.
+
+---
+
+*15 days. Real projects. Real AI. No shortcuts.* 🚀
