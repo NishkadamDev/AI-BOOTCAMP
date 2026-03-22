@@ -1,22 +1,26 @@
-# 🧠 Local-Brain
+# 🥧 PI-Setup
 
-> A fully offline AI brain running on a Raspberry Pi 5 — no internet, no API, no cloud. Just pure local intelligence.
+> The hardest part of edge AI isn't the AI — it's getting the hardware ready. Here's how it's done.
 
 ---
 
 ## 🧠 About This Project
 
-**Local-Brain** is a local AI assistant that runs entirely on a Raspberry Pi 5 using Ollama. No API calls. No Wi-Fi required. The model lives on the device and answers questions in real time — proving that you don't need the cloud to run a powerful AI.
+**PI-Setup** documents the full process of setting up a Raspberry Pi 5 as an edge AI device — installing dependencies, configuring Ollama, downloading local models, and proving the whole thing works offline.
 
-### Real Output Example
+It took a lot of downloading, a lot of connecting, and a lot of patience. But it was worth it.
 
-Asked to explain why the sky is blue to a 5 year old:
+---
 
-> *"So, you know how we can see colors, right? Like, some colors are bright and pretty, and others are a little bit dull. When sunlight comes from the sun, it's made up of all different kinds of colors, like red, green, blue, and yellow..."*
->
-> *"Isn't that magic?"*
+## ✅ Proof It Works
 
-The Local Brain types so many words per second and knows so much. 🤯
+Asked the Pi — with no internet connection — *"Who was the first person to walk on the moon?"*
+
+The Pi answered in **5 seconds**:
+
+> *"The first person to walk on the moon was Neil Armstrong. On July 20, 1969, Armstrong and Edwin 'Buzz' Aldrin became the first humans to set foot on the lunar surface during NASA's Apollo 11 mission."*
+
+No Wi-Fi. No API. No cloud. Just the Pi, thinking on its own.
 
 ---
 
@@ -32,41 +36,39 @@ The Local Brain types so many words per second and knows so much. 🤯
 
 ---
 
-## ⚙️ How It Works
+## ⚙️ What the Setup Involved
 
-1. **Ollama runs on the Pi** — the model is downloaded and served locally, no internet needed
-2. **Python sends a prompt** — a script passes the question to the local model via Ollama's API
-3. **Model responds** — Llama/Gemma generates a full answer entirely on-device
-4. **Output is printed** — the response streams back to the terminal in real time
+- Flashing the Raspberry Pi OS onto an SD card
+- Connecting the Pi to power, display, keyboard, and camera
+- Installing Python and required dependencies
+- Downloading and configuring Ollama on the Pi
+- Pulling a local LLM (Llama/Gemma) onto the device
+- Testing the model offline to confirm everything works
 
 ---
 
-## 🌐 Why Local AI Matters
+## ⏱️ Performance
 
-| | Cloud AI (Claude, Gemini) | Local AI (Local-Brain) |
+| Query | Response Time | Internet Used |
 |---|---|---|
-| **Internet required** | ✅ Yes | ❌ No |
-| **Privacy** | Data leaves device | Stays on device |
-| **Speed** | Fast | Depends on hardware |
-| **Cost** | API credits | Free after setup |
-| **Works offline** | ❌ No | ✅ Yes |
+| "Who was the first person to walk on the moon?" | ~5 seconds | ❌ None |
 
 ---
 
 ## 💡 Key Learnings
 
-- Installing and running Ollama on Raspberry Pi hardware
-- Understanding the difference between cloud AI and edge AI
-- Serving a local LLM and querying it via Python
-- The tradeoffs between local and cloud AI models
+- Setting up a Raspberry Pi from scratch is non-trivial but totally doable
+- Ollama makes running local LLMs on low-power hardware surprisingly accessible
+- Edge AI is real — a Pi can answer complex questions with zero internet dependency
+- The setup process is a one-time cost; once it's done, it unlocks every Pi project that follows
 
 ---
 
 ## 🚀 Part of the AI Bootcamp
 
-This project was built during the **Week 2 Physical AI** phase of a 15-day AI Developer Bootcamp.  
+This setup was the foundation for all Week 2 Physical AI projects in the 15-day AI Developer Bootcamp.  
 See the full bootcamp repo → [The AI Bootcamp](../README.md)
 
 ---
 
-*No Wi-Fi. No API key. No problem.* 📡❌
+*Difficult to set up. Worth every second.* 🔧
