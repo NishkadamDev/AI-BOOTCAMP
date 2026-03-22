@@ -1,14 +1,14 @@
-# 🕵️ Human Detector (Boss Detector)
+# ⚔️ Claude vs Gemini — Storytelling & Logic Showdown
 
-> Catch anyone trying to sneak in — live human detection on a Raspberry Pi 5 with a real-time dashboard.
+> Same prompt. Two AIs. One winner.
 
 ---
 
 ## 🧠 About This Project
 
-**Human Detector** is an edge AI security camera project that detects when a person enters the frame and logs the intrusion with a timestamp. Built on a Raspberry Pi 5 with a live camera feed, it uses AI to spot humans in real time and reports detections to a dashboard built on Replit.
+**Claude vs Gemini** is a head-to-head AI comparison experiment. Both models were given the exact same story prompt and asked to generate a creative narrative. The outputs were then evaluated side by side — not just for creativity and writing quality, but for internal logic: did the story make sense? Were the plot points consistent? Did the events follow logically from each other?
 
-Field tested and verified: it caught **Laksh** trying to sneak in at **3:42 PM**. The dashboard didn't miss a thing.
+Spoiler: Claude won.
 
 ---
 
@@ -16,56 +16,47 @@ Field tested and verified: it caught **Laksh** trying to sneak in at **3:42 PM**
 
 | Layer | Tool |
 |---|---|
-| **Hardware** | Raspberry Pi 5 + Camera Module |
-| **AI / Detection** | Claude (Anthropic API), Gemini (Google) |
-| **Dashboard & Backend** | Replit |
+| **AI Model 1** | Claude (Anthropic) |
+| **AI Model 2** | Gemini (Google) |
 | **Language** | Python |
 
 ---
 
 ## ⚙️ How It Works
 
-1. **Watch** — The Pi camera streams a live feed, monitoring the room continuously
-2. **Detect** — Claude analyzes frames and identifies when a human is present
-3. **Log** — The detection is timestamped and sent to the Replit dashboard
-4. **Alert** — The dashboard displays the intrusion log so you always know who came in and when
+1. **Same Prompt** — Both AIs receive the identical story prompt with no extra guidance
+2. **Generate** — Each model produces its own complete narrative
+3. **Compare** — Outputs are evaluated across two dimensions:
+   - ✍️ **Storytelling quality** — creativity, atmosphere, character, prose
+   - 🧩 **Internal logic** — plot consistency, cause and effect, story coherence
+4. **Verdict** — A winner is declared per category and overall
 
 ---
 
-## 📊 The Dashboard
+## 📊 Results
 
-The Replit-hosted dashboard shows:
-
-- ✅ Live detection status (Human detected / All clear)
-- 🕐 Timestamp of each detection event
-- 📋 Full intrusion log with history
-
----
-
-## 🧪 Real-World Test
-
-| Who | Time | Result |
+| Category | Claude | Gemini |
 |---|---|---|
-| Laksh | 3:42 PM | 🚨 Caught |
-
-The Boss Detector works. Don't test it.
+| ✍️ Storytelling Quality | ✅ Winner | — |
+| 🧩 Story Logic | ✅ Winner | — |
+| 🏆 Overall | ✅ **Winner** | — |
 
 ---
 
 ## 💡 Key Learnings
 
-- Using Claude for real-time image analysis instead of a traditional CV model
-- Connecting Raspberry Pi hardware to a cloud-hosted dashboard via API
-- Building a simple but functional security logging system
-- Combining edge hardware with web-based monitoring
+- The same prompt can produce dramatically different outputs depending on the model
+- Logical consistency in storytelling is just as important as creative flair
+- Claude tends to maintain narrative coherence over longer outputs
+- Comparing AI outputs side by side is one of the best ways to understand model strengths
 
 ---
 
 ## 🚀 Part of the AI Bootcamp
 
-This project was built during the **Week 2 Physical AI** phase of a 15-day AI Developer Bootcamp.  
+This project was built during the **Week 1 AI Software Tools** phase of a 15-day AI Developer Bootcamp.  
 See the full bootcamp repo → [The AI Bootcamp](../README.md)
 
 ---
 
-*No sneaking allowed.* 🚫👀
+*When the prompt is equal, the model's true character comes out.* 🖊️
